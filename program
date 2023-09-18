@@ -1,0 +1,32 @@
+products = ["Sankofa Foods", "Jamestown Coffee", "Bioko Chocolate", "Blue Skies Ice Cream",
+"Fair Afric Chocolate", "Kawa Moka Coffee", "Aphro Spirit", "Mensado Bissap", "Voltic"]
+
+prices = [30, 25, 40, 20, 20, 35, 45, 50, 35]
+
+last_week = [2, 3, 5, 8, 4, 4, 6, 2, 9]
+
+avg_price = sum(prices)/len(prices)
+output = f"The total price average for all products is ${avg_price}"
+print(output)
+
+discount = 5
+for i in range(len(prices)):
+    prices[i] -= discount
+output = f"The new price list is {prices}"
+print(output)
+
+revenue = []
+for i in range(len(prices)):
+    revenue.append(prices[i]*last_week[i])
+print("The total revenue generated last week is "+"$"+str(sum(revenue)))
+
+#daily_avg = sum(revenue)/len
+
+products_prices = dict(zip(products,prices))
+target_price = 30
+
+for i,j in products_prices.items():
+    if j<30:
+    
+
+
