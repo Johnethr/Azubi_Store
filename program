@@ -6,27 +6,28 @@ prices = [30, 25, 40, 20, 20, 35, 45, 50, 35]
 last_week = [2, 3, 5, 8, 4, 4, 6, 2, 9]
 
 avg_price = sum(prices)/len(prices)
-output = f"The total price average for all products is ${avg_price}"
+output = f"1. The total price average for all products is ${avg_price}"
 print(output)
 
 discount = 5
 for i in range(len(prices)):
     prices[i] -= discount
-output = f"The new price list is {prices}"
+output = f"2. The new price list is {prices}"
 print(output)
 
 revenue = []
 for i in range(len(prices)):
     revenue.append(prices[i]*last_week[i])
-print("The total revenue generated last week is "+"$"+str(sum(revenue)))
+print("3. The total revenue generated last week is "+"$"+str(sum(revenue)))
 
-#daily_avg = sum(revenue)/len
+daily_avg = sum(revenue)/7
+print("4. The average daily revenue generated from the products is "+"$"+str(daily_avg))
 
 products_prices = dict(zip(products,prices))
 target_price = 30
-
+below_30 = []
 for i,j in products_prices.items():
     if j<30:
-    
-
-
+        below_30.append(i)
+output = f"5. The products less than $30 are: {below_30}"
+print(output)
